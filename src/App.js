@@ -9,40 +9,53 @@ class App extends React.Component {
     this.state = {
       monsters: [
         {
-          name: "rohan",
+          name: "Rohan",
           id: "1",
         },
         {
-          name: "kishan",
+          name: "Kishan",
           id: "2",
         },
         {
-          name: "pradumna",
+          name: "Pradumna",
           id: "3",
         },
         {
-          name: "pradumna",
+          name: "Riya",
           id: "4",
         },
         {
-          name: "pradumna",
+          name: "Khushi",
           id: "5",
         },
         {
-          name: "pradumna",
+          name: "Sameer",
           id: "6",
         },
         {
-          name: "pradumna",
+          name: "Prem",
           id: "7",
         },
       ],
+
+      searchField: "",
     };
   }
   render() {
+    const { monsters, searchField } = this.state;
+
+    const filteredMonsters = monsters.filter((monster) =>
+      monster.name.toLowerCase().includes(searchField.toLowerCase())
+    );
     return (
       <div className="App">
-        <CardList monsters={this.state.monsters} />
+        <input
+          className="search"
+          type="search"
+          placeholder="Search monsters"
+          onChange={(e) => this.setState({ searchField: e.target.value })}
+        />
+        <CardList monsters={filteredMonsters} />
       </div>
     );
   }
