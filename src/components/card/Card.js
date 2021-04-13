@@ -10,7 +10,7 @@ export const Card = (props) => {
       />
       <center>
         {" "}
-        <h1>{props.monsters.name}</h1>
+        <h2>{props.monsters.name}</h2>
       </center>
     </div>
   );

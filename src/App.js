@@ -36,11 +36,23 @@ class App extends React.Component {
           name: "Prem",
           id: "7",
         },
+        {
+          name: "Kannu",
+          id: "8",
+        },
+        {
+          name: "Kushagra",
+          id: "9",
+        },
       ],
 
       searchField: "",
     };
   }
+
+  handleChange = (e) => {
+    this.setState({ searchField: e.target.value });
+  };
   render() {
     const { monsters, searchField } = this.state;
 
@@ -49,11 +61,12 @@ class App extends React.Component {
     );
     return (
       <div className="App">
+        <h1>Monsters Rolodex</h1>
         <input
           className="search"
           type="search"
           placeholder="Search monsters"
-          onChange={(e) => this.setState({ searchField: e.target.value })}
+          onChange={this.handleChange}
         />
         <CardList monsters={filteredMonsters} />
       </div>
