@@ -1,3 +1,7 @@
+.App {
+  text-align: center;
+}
+
 .search {
   -webkit-appearance: none;
   border: none;
@@ -6,7 +10,6 @@
   width: 150px;
   line-height: 30px;
   margin-bottom: 30px;
-  margin-left: 680px;
   text-align: center;
 }
 
@@ -14,7 +17,6 @@ h1 {
   font-family: "Bigelow Rules";
   font-size: 72px;
   color: #0ccac4;
-  text-align: center;
 }
 
 h2 {

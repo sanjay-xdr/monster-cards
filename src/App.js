@@ -44,6 +44,18 @@ class App extends React.Component {
           name: "Kushagra",
           id: "9",
         },
+        {
+          name: "Ishan",
+          id: "10",
+        },
+        {
+          name: "Sanju",
+          id: "11",
+        },
+        {
+          name: "Shivam",
+          id: "12",
+        },
       ],
 
       searchField: "",
