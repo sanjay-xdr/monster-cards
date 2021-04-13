@@ -1,5 +1,6 @@
 .CardList {
-  width: 85vw;
+  margin-top:10px;
+  margin-left:10px;
   
   display: grid;
   
